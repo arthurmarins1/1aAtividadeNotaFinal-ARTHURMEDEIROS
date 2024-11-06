@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e8f0fe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .cartao-perfil {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 350px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cartao-perfil:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
+        }
+        h2 {
+            font-size: 16px;
+            color: #777;
+            font-weight: normal;
+            margin: 5px 0;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+            margin: 15px 0;
+        }
+
+        .habilidades {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .habilidade {
+            font-size: 14px;
+            color: #555;
+            margin: 10px 0 5px;
+        }
+        .barra-habilidade {
+            width: 100%;
+            background-color: #d9e2f3;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .barra-habilidade div {
+            height: 10px;
+            border-radius: 5px;
+            transition: width 0.4s;
+        }
+        .habilidade-html { width: 80%; background-color: #e44d26; }
+        .habilidade-css { width: 70%; background-color: #264de4; }
+        .habilidade-js { width: 60%; background-color: #f0db4f; color: #000; }
+
+        .botoes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .botao {
+            padding: 8px 14px;
+            font-size: 14px;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s, background-color 0.3s;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .reset { background-color: #888; }
+
+        .botao:hover {
+            transform: scale(1.1);
+            background-color: #333;
+        }
+
+        .github-link {
+            margin-top: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+        .github-link:hover {
+            color: #264de4;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .cartao-perfil {
+                width: 100%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            .botoes {
+                gap: 8px;
+            }
+
+            .botao {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cartao-perfil">
+        <h1>Arthur Medeiros Marins</h1>
+        <h2>Matrícula: 202403680963</h2>
+        <p>Atualmente estou cursando Análise e Desenvolvimento de Sistemas, na Universidade Estácio de Sá. Tenho como principal objetivo, ser um bom profissional.</p>
+        
+        <div class="habilidades">
+            <div class="habilidade">HTML</div>
+            <div class="barra-habilidade"><div class="habilidade-html"></div></div>
+            
+            <div class="habilidade">CSS</div>
+            <div class="barra-habilidade"><div class="habilidade-css"></div></div>
+            
+            <div class="habilidade">JavaScript</div>
+            <div class="barra-habilidade"><div class="habilidade-js"></div></div>
+        </div>
+
+        <div class="botoes">
+            <a href="#" class="botao reset" id="botaoReset">Reset</a>
+        </div>
+
+        <a href="https://github.com/arthurmarins1/1aAtividadeNotaFinal-ARTHURMEDEIROS" class="github-link" target="_blank">GitHub</a>
+    </div>
+
+    <script>
+        let reset = false;
+
+        document.getElementById('botaoReset').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            if (reset) {
+                // habilidade padrao
+                document.querySelector('.habilidade-html').style.width = '80%';
+                document.querySelector('.habilidade-css').style.width = '70%';
+                document.querySelector('.habilidade-js').style.width = '60%';
+            } else {
+                // habilidade resetada
+                document.querySelector('.habilidade-html').style.width = '0%';
+                document.querySelector('.habilidade-css').style.width = '0%';
+                document.querySelector('.habilidade-js').style.width = '0%';
+            }
+
+            reset = !reset;
+        });
+    </script>
+
+</body>
+</html>

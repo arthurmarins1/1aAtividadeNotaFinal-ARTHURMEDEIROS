@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container-tabela {
+            width: 100%;
+            max-width: 1200px;
+            overflow-x: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 15px;
+            font-size: 1rem;
+            border-bottom: 1px solid #ddd;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        th:hover {
+            background-color: #0056b3; 
+            transform: scale(1.05); 
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.02); 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        td {
+            color: #333;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nome-produto {
+            font-weight: bold;
+            color: #007bff; 
+            transition: color 0.3s ease; 
+        }
+
+        .preco-produto {
+            color: #e74a3b;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .categoria-produto {
+            color: #4e73df;
+            transition: color 0.3s ease;
+        }
+
+        .descricao-produto {
+            font-style: italic;
+            color: #6c757d;
+            transition: color 0.3s ease;
+        } 
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-tabela">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="nome-produto">Produto 1</td>
+                    <td class="preco-produto">R$ 999,99</td>
+                    <td class="categoria-produto">Eletrônicos</td>
+                    <td class="descricao-produto">Smartphone</td>
+                </tr>
+                <tr>
+                    <td class="nome-produto">Produto 2</td>
+                    <td class="preco-produto">R$ 49,99</td>
+                    <td class="categoria-produto">Roupas</td>
+                    <td class="descricao-produto">Camiseta</td>
+                </tr>
+                <tr>
+                    <td class="nome-produto">Produto 3</td>
+                    <td class="preco-produto">R$ 10,00</td>
+                    <td class="categoria-produto">Alimentos</td>
+                    <td class="descricao-produto">Barra de chocolate</td>
+                </tr>
+                <tr>
+                    <td class="nome-produto">Produto 4</td>
+                    <td class="preco-produto">R$ 120,00</td>
+                    <td class="categoria-produto">Eletrônicos</td>
+                    <td class="descricao-produto">Fone de ouvido</td>
+                </tr>
+                <tr>
+                    <td class="nome-produto">Produto 5</td>
+                    <td class="preco-produto">R$ 20,00</td>
+                    <td class="categoria-produto">Beleza</td>
+                    <td class="descricao-produto">Creme</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
